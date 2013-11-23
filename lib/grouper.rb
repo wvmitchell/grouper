@@ -40,5 +40,16 @@ module Grouper
     def size
       @teammates.length
     end
+
+    def overlap(other)
+      teammates & other.teammates
+    end
+  end
+
+  class Member
+
+    def initialize(name)
+      @name = name
+    end
   end
 end
