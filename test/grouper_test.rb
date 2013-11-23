@@ -52,7 +52,18 @@ class GrouperTest < MiniTest::Test
     people = ['Will', 'Logan', 'Eric', 'Layla']
     group = Grouper::Group.new
     group.add_members(people)
+    num_members = group.members.length
     group.add_team_of(2)
+    assert_equal num_members, group.members.length
+  end
+
+  def test_teams_within_group_share_no_members
+    people = ['Will', 'Logan', 'Eric', 'Layla']
+    group = Grouper::Group.new
+    group.add_members(people)
+    group.add_team_of(2)
+    group.add_team_of(2)
+    assert_equal 0, (group.teams[0].teammates & group.teams[1].teammates).length
   end
 
 end
