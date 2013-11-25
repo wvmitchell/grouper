@@ -5,5 +5,4 @@ require "grouper/member"
 
 module Grouper
 
-
 end

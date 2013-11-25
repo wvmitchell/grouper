@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Grouper::VERSION
   spec.authors       = ["Will Mitchell"]
   spec.email         = ["wvmitchell@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{A gem for creating uniq teams from a large group}
+  spec.summary       = %q{All classes underneath grouper module}
   spec.homepage      = ""
   spec.license       = "MIT"
 
