@@ -1,5 +1,6 @@
 module Grouper
   class Team
+    include Comparable
 
     attr_reader :teammates
 
@@ -18,5 +19,10 @@ module Grouper
     def add_member(member)
       @teammates << member
     end
+
+    def <=>(other)
+      teammates.sort <=> other.teammates.sort
+    end
+
   end
 end
