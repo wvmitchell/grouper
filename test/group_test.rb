@@ -37,7 +37,4 @@ class GroupTest < MiniTest::Test
     end
   end
 
-  def test_group_can_return_valid_team_sets
-  end
-
 end
